@@ -1,0 +1,225 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+header{
+  background: #EDEDED;
+  width: 100%;
+  height: 100px;
+}
+.header-title{
+  padding: 10px;
+  font-weight: 400;
+  font-size: 50px;
+}
+.content{
+  display: flex;
+  align-items: flex-start;
+}
+.content-left{
+  order: 0;
+  padding: 10px;
+  width: 25%;
+  background: #777;
+}
+.dropbtn{
+  background: none;
+  outline: none;
+  border:none;
+  cursor:pointer;
+  font-weight: 500;
+  font-size: 20px;
+}
+.dropdown-content {
+  display: none;
+  min-width: 160px;
+  z-index: 1;
+}
+.content-left__title{
+  cursor: pointer;
+}
+.content-left__dropdown li{
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+.dropdown-content a:hover{
+  border: 1px solid #000;
+}
+.content-left__dropdown{
+  margin-top: 10px;
+  display: none;
+}
+.show {
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.content-center{
+  order: 1;
+  display: flex;
+  width: 55%;
+}
+.content-center__content{
+  padding: 10px;
+  background: #ededed;
+  width: 45%;
+}
+.buy{
+  display: flex;
+  align-items: center;
+}
+.buy-price{
+  font-size: 24px;
+  color:#ff0000
+}
+.buy-btn{
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  border: none;
+  background: #ccc;
+  padding: 5px 10px;
+  font-size: 14px;
+  transition: all .2s;
+}
+
+input{
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+.buy-btn:hover{
+  background: rgb(151, 150, 150);
+}
+.content-center__desc{
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.content-center__img{
+  width: 60%;
+  height: 425px;
+  background: url("img/main.jpg");
+  background-size: cover;
+}
+footer{
+  height: 100%;
+  background: #999;
+}
+.footer-title{
+  padding: 10px;
+  font-weight: 400;
+  font-size: 50px;
+}
+.content-right{
+  order: 2;
+  width: 25%;
+  background: #999;
+  padding: 10px;
+}
+.content-right h2{
+  width: 100%;
+}
+.porsche{
+  display: none;
+}
+@media(max-width: 1025px){
+  .content{
+    flex-direction: column;
+    max-height: 680px;
+    flex-wrap: wrap;
+  }
+  .content-right{
+    width: 26%;
+    order: 0;
+  }
+  .content-left{
+    width: 26%;
+    order: 1;
+  }
+  .content-center{
+    flex-direction: column;
+    align-items: center;
+    background-color: #ededed;
+    text-align: center;
+    order: 3;
+    width: 760px;
+  }
+  .content-center__img{
+    width: 70%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .buy{
+    justify-content: space-around;
+  }
+}
+@media(max-width: 375px){
+  header{
+    height: 150px;
+  }
+  .content{
+    flex-direction: column;
+    max-height: 100%;
+  }
+  .content-center__img{
+    background: none;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+  }
+  .content-left__dropdown li{
+    list-style:circle;
+  }
+  .content-center{
+    flex-direction: column;
+    align-items: center;
+    background-color: #ededed;
+    text-align: center;
+    order: 3;
+    width: 100%;
+  }
+  .content-right{
+    width: 100%;
+  }
+  .content-left{
+    width: 100%;
+  }
+  .content-left__title{
+    background: #000;
+    color: #fff;
+    font-weight: 300;
+    padding: 10px;
+  }
+  .porsche{
+    margin: auto;
+    width: 320px;
+    display: block;
+  }
+  .content-center__content{
+    width: 100%;
+  }
+  .buy{
+    flex-direction: column;
+  }
+  .buy-price{
+    letter-spacing: 0.1rem;
+    font-size: 28px;
+    font-weight: 800;
+  }
+  .buy-btn{
+    margin-top: 10px;
+    padding: 10px 40px;
+    font-size: 20px;
+    background: #FAC552;
+    font-weight: 500;
+  }
+}

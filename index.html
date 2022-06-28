@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1 class="header-title">header</h1>
+  </header>
+  <main>
+    <div class="content">
+      <div class="content-right">
+        <h2>right</h2>
+      </div>
+      <div class="content-left">
+        <h2 class="content-left__title" onclick="drop()">Меню</h2>
+        <ul class="content-left__dropdown" id="myDropdown1">
+         <li>Список1</li>
+         <li>Список2</li>
+         <li>Список3</li>
+        </ul>
+      </div>
+      <div class="content-center">
+        <div class="content-center__img">
+          <img class="porsche" src="img/main.jpg" alt="">
+        </div>
+        <div class="content-center__content">
+          <div class="buy">
+            <span class="buy-price">$500000</span>
+            <button class="buy-btn">Купить</button>
+          </div>
+          <p class="content-center__desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime laborum repudiandae officiis minus accusamus.
+          </p>
+          <input type="text">
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h1 class="footer-title">footer</h1>
+    </footer>
+  </main>
+
+
+
+
+
+
+
+  <script>
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+
+    function drop() {
+      document.getElementById("myDropdown1").classList.toggle("show");
+    }
+
+
+    let i;
+    for (i = 0; i < dropdowns.length; i++) {
+      let openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+      
+  </script>
+</body>
+</html>
