@@ -17,10 +17,15 @@
   <main>
     <div class="content">
       <div class="content-right">
-        <h2>right</h2>
+        <h2 class="content-left__title" onclick="drop2()">Right</h2>
+        <ul class="content-left__dropdown" id="myDropdown2">
+         <li>Список1</li>
+         <li>Список2</li>
+         <li>Список3</li>
+        </ul>
       </div>
       <div class="content-left">
-        <h2 class="content-left__title" onclick="drop()">Меню</h2>
+        <h2 class="content-left__title" onclick="drop1()">Меню</h2>
         <ul class="content-left__dropdown" id="myDropdown1">
          <li>Список1</li>
          <li>Список2</li>
@@ -57,10 +62,12 @@
   <script>
     const dropdowns = document.getElementsByClassName("dropdown-content");
 
-    function drop() {
+    function drop1() {
       document.getElementById("myDropdown1").classList.toggle("show");
     }
-
+    function drop2() {
+      document.getElementById("myDropdown2").classList.toggle("show");
+    }
 
     let i;
     for (i = 0; i < dropdowns.length; i++) {
